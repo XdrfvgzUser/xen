@@ -17,7 +17,8 @@ jobs:
       run: |
         echo ${{ secrets.COVERITY_SCAN_EMAIL }}
         echo ${{ secrets.COVERITY_SCAN_TOKEN }}
-      
+    - name: true configure
+      run: ./configure
     - name: make
       run: make
     - name: make check
