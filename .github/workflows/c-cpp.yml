@@ -22,7 +22,7 @@ jobs:
     - name: true configure
       run: |
         pip install features
-        python3 xen/tools/gen-cpuid.py
+        python3 xen/tools/compat-build-header.py
         ./configure
     - name: make
       run: make
