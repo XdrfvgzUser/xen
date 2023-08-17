@@ -18,9 +18,11 @@ jobs:
         echo ${{ secrets.COVERITY_SCAN_EMAIL }}
         echo ${{ secrets.COVERITY_SCAN_TOKEN }}
     - name: install dependencies 
-      run: sudo apt install iasl yajl-tools libyajl-doc libyajl-dev
+      run: sudo apt install iasl yajl-tools libyajl-doc libyajl-dev python3
     - name: true configure
-      run: ./configure
+      run: |
+        python3 xen/tools/gen-cpuid.py
+        ./configure
     - name: make
       run: make
     - name: make check
