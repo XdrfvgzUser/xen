@@ -29,7 +29,7 @@ pats = [
  [ r"(^|[^\w])long([^\w]|$$)", r"\1int\2" ]
 ];
 
-output_filename = sys.argv[1]
+output_filename = "xen"
 
 # tr '[:lower:]-/.' '[:upper:]___'
 header_id = '_' + \
