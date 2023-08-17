@@ -29,7 +29,7 @@ pats = [
  [ r"(^|[^\w])long([^\w]|$$)", r"\1int\2" ]
 ];
 
-output_filename = "shutdown"
+output_filename = "shutdown.h"
 
 # tr '[:lower:]-/.' '[:upper:]___'
 header_id = '_' + \
