@@ -18,7 +18,7 @@ jobs:
         echo ${{ secrets.COVERITY_SCAN_EMAIL }}
         echo ${{ secrets.COVERITY_SCAN_TOKEN }}
     - name: install dependencies 
-      run: apt install iasl
+      run: sudo apt install iasl
     - name: true configure
       run: ./configure
     - name: make
