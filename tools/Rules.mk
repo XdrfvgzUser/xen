@@ -195,7 +195,7 @@ INSTALL_PYTHON_PROG = \
 %.opic: %.S
 	$(CC) $(CPPFLAGS) -DPIC $(CFLAGS) -fPIC -c -o $@ $< $(APPEND_CFLAGS)
 
-subdirs-all subdirs-clean subdirs-install subdirs-distclean subdirs-uninstall: .phony
+subdirs-all subdirs-clean subdirs-distclean subdirs-uninstall: .phony
 	@set -e; for subdir in $(SUBDIRS) $(SUBDIRS-y); do \
 		$(MAKE) subdir-$(patsubst subdirs-%,%,$@)-$$subdir; \
 	done
